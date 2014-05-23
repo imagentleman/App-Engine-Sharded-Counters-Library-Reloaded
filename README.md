@@ -2,7 +2,7 @@
 
 A revision of the original sharding counters example library from Google (https://github.com/GoogleCloudPlatform/appengine-sharded-counters-python).
 
-This forks adds:
+This fork adds:
 
 - A reset method to set all the counters to zero.
 
