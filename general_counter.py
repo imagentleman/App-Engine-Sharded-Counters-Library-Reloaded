@@ -1,3 +1,13 @@
+import random
+
+from google.appengine.api import memcache
+from google.appengine.ext import ndb
+
+
+SHARD_KEY_TEMPLATE = 'shard-{}-{:d}'
+
+
+
 class GeneralCounterShardConfig(ndb.Model):
     """Tracks the number of shards for each named counter."""
     num_shards = ndb.IntegerProperty(default=20)
