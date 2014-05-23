@@ -1,10 +1,16 @@
-# Sharded Counters
+# Sharded Counters Library for App Engine
 
-A simple application that demonstrates two approaches to sharding counters.
+A revision of the original sharding counters example library from Google (https://github.com/GoogleCloudPlatform/appengine-sharded-counters-python).
 
-To achieve higher throughput across different instances, counters can be
-sharded to avoid concurrency issues. This application performs this in
-two different ways:
+This forks adds:
+
+- A reset method to set all the counters to zero.
+
+- A delta parameter to increase the counter by any number (not just by 1), including negative values (the equivalent to decrement).
+
+- A small refactor that encapsulates all the available methods to its related model (for portability).
+
+The original provides:
 
 - Simple Sharding: Uses a constant to define the number of shards and randomly
   picks an index up to this number when incrementing the counter. Each shard is
